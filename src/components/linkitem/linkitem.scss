@@ -1,0 +1,19 @@
+@use "shared/scss" as *;
+
+.linkitem {
+  a {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $white;
+    margin: 0 10px;
+
+    &:hover {
+        color: $primary-orange;
+    }
+
+    @include laptop-large {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -5,8 +5,9 @@
   font-size: calculateRem($size);
 }
 
-@mixin flex-centered() {
+@mixin flex-centered($direction) {
   display: flex;
+  flex-direction: $direction;
   justify-content: center;
   align-items: center;
 }

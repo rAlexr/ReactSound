@@ -1,0 +1,79 @@
+@use "shared/scss" as *;
+
+.navbar {
+  &-underline {
+    height: 2px;
+    background-color: red;
+
+    @include tablet {
+      margin: 0 40px;
+    }
+    @include laptop-small {
+      margin: 0 100px;
+    }
+    @include laptop-large {
+      margin: 0 150px;
+    }
+    @include desktop {
+      margin: 0 200px;
+    }
+  }
+
+  &-container {
+    background-color: $black;
+    padding: $padding-mobile;
+    display: flex;
+    justify-content: space-between;
+
+    > .linktab {
+      display: none;
+    }
+
+    & svg:first-child {
+      fill: $white;
+    }
+
+    & svg:last-child {
+      fill: $white;
+      &:hover {
+        fill: $primary-orange;
+        cursor: pointer;
+      }
+    }
+
+    @include tablet {
+      padding: $padding-tablet;
+      position: relative;
+
+      & svg:nth-child(2) {
+        position: absolute;
+        left: 100px;
+      }
+    }
+
+    @include laptop-small {
+      padding: $padding-laptop-small;
+
+      > .linktab {
+        display: inline-flex;
+      }
+
+      & svg:first-child {
+        display: none;
+      }
+
+      & svg:nth-child(2) {
+        position: inherit;
+        left: 0;
+      }
+    }
+
+    @include laptop-large {
+      padding: $padding-laptop-large;
+    }
+
+    @include desktop {
+      padding: $padding-desktop;
+    }
+  }
+}
