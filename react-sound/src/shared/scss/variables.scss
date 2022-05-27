@@ -1,0 +1,72 @@
+// Colors
+$primary-orange: #d87d4a;
+$secondary-orange: #fbaf85;
+
+$white: #ffffff;
+$black: #000000;
+$prim-black: #191919;
+
+$second-black: #101010;
+
+$gray-main: #f1f1f1;
+$gray-secondary: #afafaf;
+
+//padding
+
+$padding-mobile: 20px 30px;
+$padding-tablet: 20px 40px;
+$padding-laptop-small: 20px 100px;
+$padding-laptop-large: 20px 150px;
+$padding-desktop: 20px 200px;
+
+//buttons
+
+.orange {
+  width: 160px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-orange;
+  margin: 40px 0 0 0;
+
+  &:hover {
+    background-color: $secondary-orange;
+  }
+
+  a {
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.black {
+  width: 160px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid black;
+  margin: 40px 0 0 0;
+
+  &:hover {
+    background-color: $black;
+    a {
+      color: $white;
+    }
+  }
+
+  a {
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+//header responsive font-size
+$header-responsive-tablet: calculateRem(60px);
+$paragraph-responsive-tablet: calculateRem(20px);
