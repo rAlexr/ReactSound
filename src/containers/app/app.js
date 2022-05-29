@@ -4,7 +4,7 @@ import NavBar from "components/navbar";
 
 import Home from "pages/home";
 import Products from "pages/products";
-import SignIn from "pages/sign-in";
+import Autentification from "pages/autentification";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route path='/' element={<NavBar />} >
           <Route index={true} element={<Home />} />
           <Route path='products' element={<Products />} />
-          <Route path='signin' element={<SignIn />} />
+          <Route path='autentification' element={<Autentification />} />
         </Route>
       </Routes>
     </div>
