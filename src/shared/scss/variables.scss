@@ -11,34 +11,29 @@ $second-black: #101010;
 $gray-main: #f1f1f1;
 $gray-secondary: #afafaf;
 
-//padding
-
-$padding-mobile: 20px 30px;
-$padding-tablet: 20px 40px;
-$padding-laptop-small: 20px 100px;
-$padding-laptop-large: 20px 150px;
-$padding-desktop: 20px 200px;
+//padding-for navbar
+$padding-mobile: 40px 30px;
+$padding-tablet: 40px 40px;
+$padding-laptop-small: 40px 100px;
+$padding-laptop-large: 40px 180px;
+$padding-desktop: 40px 200px;
 
 //buttons
-
 .orange {
   width: 160px;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-transform: uppercase;
   background-color: $primary-orange;
-  margin: 40px 0 0 0;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 
   &:hover {
     background-color: $secondary-orange;
-  }
-
-  a {
-    color: $white;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
   }
 }
 
@@ -51,19 +46,14 @@ $padding-desktop: 20px 200px;
   background-color: transparent;
   border: 1px solid black;
   margin: 40px 0 0 0;
+  color: $black;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
 
   &:hover {
     background-color: $black;
-    a {
-      color: $white;
-    }
-  }
-
-  a {
-    color: $black;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: $white;
   }
 }
 

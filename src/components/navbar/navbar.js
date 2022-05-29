@@ -3,6 +3,7 @@ import { ReactComponent as CartIcon } from "shared/svg/icon-cart.svg";
 import { ReactComponent as Logo } from "shared/svg/logo.svg";
 
 import LinkTab from "components/linktab";
+import { Outlet } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -14,6 +15,7 @@ const NavBar = () => {
         <CartIcon />
       </div>
       <div className="navbar-underline"></div>
+      <Outlet />
     </div>
   );
 };

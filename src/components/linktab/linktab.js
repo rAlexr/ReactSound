@@ -7,6 +7,7 @@ const LinkTab = () => {
       <LinkItem text={"headphones"} path={"/"} />
       <LinkItem text={"speakers"} path={"/"} />
       <LinkItem text={"earphones"} path={"/"} />
+      <LinkItem text={"sign in"} path={"signin"} />
     </div>
   );
 };
