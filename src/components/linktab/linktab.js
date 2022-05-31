@@ -5,12 +5,7 @@ import { signOutUser } from "containers/store/firebase/firebase";
 
 
 const LinkTab = () => {
-  const { currentUser, setCurrentUser } = useContext(UserContext);
-
-  const signOutHandler = async () => {
-    await signOutUser();
-    setCurrentUser(null);
-  }
+  const { currentUser } = useContext(UserContext);
 
 
   return (
@@ -19,7 +14,7 @@ const LinkTab = () => {
       <LinkItem text={"headphones"} path={"/"} />
       <LinkItem text={"speakers"} path={"/"} />
       <LinkItem text={"earphones"} path={"/"} />
-      <LinkItem text={ currentUser ? (<span onClick={signOutHandler}>sign out</span>) : "sign in"} path={currentUser ? "autentification" : "autentification"} />
+      <LinkItem text={ currentUser ? (<span onClick={signOutUser}>sign out</span>) : "sign in"} path={currentUser ? "autentification" : "autentification"} />
     </div>
   );
 };

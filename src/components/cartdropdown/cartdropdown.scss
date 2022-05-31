@@ -1,0 +1,10 @@
+@use "shared/scss" as *;
+
+.cartdropdown {
+  width: 140px;
+  height: 300px;
+  background-color: #b95b75;
+  position: absolute;
+  right: 54px;
+  top: 106px;
+}
