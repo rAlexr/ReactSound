@@ -3,10 +3,11 @@ import CartItem from "components/cartitem";
 import { useContext } from "react";
 import { CartContext } from "containers/store/context/cartContext";
 
-
 const CartDropDown = () => {
   const { cartItems } = useContext(CartContext);
+
   console.log(cartItems);
+
   return (
     <div className="cartdropdown">
       {cartItems.length ? (
