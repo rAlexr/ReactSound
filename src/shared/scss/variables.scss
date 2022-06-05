@@ -18,45 +18,6 @@ $padding-laptop-small: 40px 100px;
 $padding-laptop-large: 40px 180px;
 $padding-desktop: 40px 200px;
 
-//buttons
-.orange {
-  width: 160px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  background-color: $primary-orange;
-  color: $white;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-
-  &:hover {
-    background-color: $secondary-orange;
-  }
-}
-
-.black {
-  width: 160px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: 1px solid black;
-  margin: 40px 0 0 0;
-  color: $black;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 2px;
-
-  &:hover {
-    background-color: $black;
-    color: $white;
-  }
-}
-
 //header responsive font-size
 $header-responsive-tablet: calculateRem(60px);
 $paragraph-responsive-tablet: calculateRem(20px);

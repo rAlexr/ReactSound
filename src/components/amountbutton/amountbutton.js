@@ -32,7 +32,7 @@ const AmountButton = ({
   return (
     <div className="amountbutton-container">
       <CartItem cartItem={cartItems.length === 0 ? cartItems : cartItems[0]} />
-      <p>{`${total === 0 ? price : total}$`}</p>
+      <p>{`total ${total === 0 ? price : total}$`}</p>
       <div className="amountbutton-container-buttons">
         <div className="amountbutton-container-buttons__amount">
           <button onClick={handleDecrement}>-</button>
@@ -40,14 +40,12 @@ const AmountButton = ({
           <button onClick={handleIncrement}>+</button>
         </div>
         <Button
-          link={""}
           text={text}
-          className={className}
-          onClick={addProductToCart}
+          onClick={handleIncrement}
         />
       </div>
     </div>
   );
-};
+};  
 
 export default AmountButton;

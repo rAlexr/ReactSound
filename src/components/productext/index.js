@@ -1,3 +1,3 @@
 import Productext from "./productext";
-import './productext.scss';
+import './productext.style.js';
 export default Productext;

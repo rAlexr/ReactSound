@@ -11,8 +11,8 @@ const LinkTab = () => {
   return (
     <div className="linktab">
       <LinkItem text={"home"} path={"/"} />
-      <LinkItem text={"headphones"} path={"/"} />
-      <LinkItem text={"speakers"} path={"/"} />
+      <LinkItem text={"headphonesXX99"} path={"/headphonesXX99"} />
+      <LinkItem text={"headphonesXX99two"} path={"/headphonesXX99two"} />
       <LinkItem text={"earphones"} path={"/"} />
       <LinkItem text={ currentUser ? (<span onClick={signOutUser}>sign out</span>) : "sign in"} path={currentUser ? "autentification" : "autentification"} />
     </div>

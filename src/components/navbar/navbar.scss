@@ -1,9 +1,10 @@
 @use "shared/scss" as *;
 
 .navbar {
+  background-color: #191919;
   &-underline {
-    height: 2px;
-    background-color: red;
+    height: 1px;
+    background-color: gray;
 
     @include tablet {
       margin: 0 40px;
@@ -20,7 +21,7 @@
   }
 
   &-container {
-    background-color: $black;
+    background-color: #191919;
     padding: $padding-mobile;
     display: flex;
     justify-content: space-between;

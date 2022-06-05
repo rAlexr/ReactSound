@@ -1,1 +1,10 @@
-@use 'shared/scss' as *;
+@use "shared/scss" as *;
+
+.home {
+  background-color: #1a1a1a;
+  position: relative;
+
+  @media screen and (min-width: 1440px) {
+    background-color: #191919;
+  }
+}

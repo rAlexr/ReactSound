@@ -1,5 +1,4 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from "firebase/app";
 import {
   getAuth,
   signInWithPopup,
@@ -7,14 +6,20 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  onAuthStateChanged
-} from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+  onAuthStateChanged,
+} from "firebase/auth";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  collection,
+  writeBatch,
+  query,
+  getDocs,
+  DocumentSnapshot,
+} from "firebase/firestore";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBfF6eNQH9OrIa8KVH1d5iGK5jZpd5xn7g",
   authDomain: "react-sound-db.firebaseapp.com",
@@ -36,10 +41,29 @@ provider.setCustomParameters({
 export const auth = getAuth();
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
+//DB
 export const dataBase = getFirestore();
 
-export const createUserDocumentFromAuth = async ( userAuth, additionalInformation= {} ) => {
-  if(!userAuth) return;
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRef = collection(dataBase, collectionKey);
+  const batch = writeBatch(dataBase);
+
+  objectsToAdd.forEach((object) => {
+    const docRef = doc(collectionRef, object.slug.toLowerCase());
+    batch.set(docRef, object);
+  });
+
+  await batch.commit();
+};
+
+export const createUserDocumentFromAuth = async (
+  userAuth,
+  additionalInformation = {}
+) => {
+  if (!userAuth) return;
 
   const userDocRef = doc(dataBase, "users", userAuth.uid);
   const userSnapshot = await getDoc(userDocRef);
@@ -62,8 +86,24 @@ export const createUserDocumentFromAuth = async ( userAuth, additionalInformatio
   return userDocRef;
 };
 
+
+export const getCategorysAndDocuments = async () => {
+  const collectionRef = collection(dataBase, 'categories');
+  const qu = query(collectionRef);
+
+  const querySnapshot = await getDocs(qu);
+  const categoryMap = querySnapshot.docs.reduce((acc, docSnaphot) => {
+    const { slug } = docSnaphot.data();
+    acc[ slug ] = docSnaphot.data(); 
+
+    return acc;
+  }, {})
+  
+  return categoryMap;
+}
+
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
-  if(!email || !password) return;
+  if (!email || !password) return;
 
   return await createUserWithEmailAndPassword(auth, email, password);
 };
@@ -76,4 +116,5 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 
 export const signOutUser = async () => await signOut(auth);
 
-export const onAuthStateChangeListener = (callBack) => onAuthStateChanged(auth, callBack);
+export const onAuthStateChangeListener = (callBack) =>
+  onAuthStateChanged(auth, callBack);
