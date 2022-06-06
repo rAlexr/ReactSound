@@ -27,7 +27,8 @@ export const ThumbContainer = styled.div`
   }
 
   @media ${device.laptopL} {
-    width: 300px;
+    width: 350px;
+    height: 230px;
     margin: 0;
   }
 `;
@@ -37,6 +38,11 @@ export const ThumbImage = styled.img`
   width: 166px;
   position: absolute;
   top: -50px;
+
+  @media ${device.laptopL} {
+    height: 210px;
+    width: 230px;
+  }
 `;
 
 export const ThumbHeader = styled.h3`

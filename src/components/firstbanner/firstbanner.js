@@ -10,8 +10,8 @@ const FirstBanner = () => {
     <div className="firstbanner">
       <div className="firstbanner-background" style={{backgroundImage: `url(${pattern})`}}></div>
       <picture className="firstbanner-img-container">
-        <source srcset={desktop} media={"(min-width: 1024px)"} />
-        <source srcset={tablet} media={"(min-width: 768px)"} />
+        <source srcSet={desktop} media={"(min-width: 1024px)"} />
+        <source srcSet={tablet} media={"(min-width: 768px)"} />
         <img src={mobile} alt={"headset"} />
       </picture>
 

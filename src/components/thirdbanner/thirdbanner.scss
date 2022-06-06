@@ -1,0 +1,55 @@
+@use "shared/scss" as *;
+
+.thirdbanner {
+  width: 100%;
+  img {
+    width: 100%;
+    height: 320px;
+    border-radius: 20px;
+  }
+
+  &-text {
+    background-color: #e2e2e2;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    h2 {
+      font-size: 28px;
+      padding: 20px 0;
+
+      @include desktop {
+        font-size: 56px;
+      }
+    }
+
+    
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-special {
+      width: 50%;
+      margin: 0 20px 0 0;
+    }
+
+    &-text {
+      width: 50%;
+      padding: 0 0 0 50px;
+      margin: 0;
+    }
+  }
+
+  @include laptop-small {
+    &-text {
+      padding: 0 0 0 100px;
+    }
+  }
+}
