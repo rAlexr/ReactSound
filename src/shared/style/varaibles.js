@@ -28,3 +28,11 @@ export const colors = {
     primaryGray: '#f1f1f1',
     secondaryGray: ' #afafaf'
 };
+
+export const padding = {
+  paddingMobile: '0 30px',
+  paddingTablet: '0 40px',
+  paddingLaptopSmall: '0 100px',
+  paddingLaptopLarge: '0 180px',
+  paddingDesktop: '0 200px'
+}

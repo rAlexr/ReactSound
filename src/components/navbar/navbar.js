@@ -9,26 +9,22 @@ import LinkTab from "components/linktab";
 import CartDropDown from "components/cartdropdown";
 import { useContext } from "react";
 
-
 const NavBar = () => {
   const { isCartOpen, setIsCartOpen } = useContext(CartContext);
   const toogle = () => {
     setIsCartOpen(!isCartOpen);
-  }
-
+  };
 
   return (
     <div className="navbar">
       {isCartOpen && <CartDropDown />}
-      
+
       <div className="navbar-container">
         <BurgerMenu />
         <Logo />
         <LinkTab />
-        <CartIcon onClick={toogle}/>
-        
+        <CartIcon onClick={toogle} />
       </div>
-      <div className="navbar-underline"></div>
       <Outlet />
     </div>
   );

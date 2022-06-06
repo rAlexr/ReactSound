@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { device } from "shared/style/varaibles";
+
+import { device, padding } from "shared/style/varaibles";
+
+const { paddingLaptopSmall, paddingLaptopLarge, paddingDesktop } = padding;
 
 export const HeroContainer = styled.div`
   display: flex;
@@ -8,19 +11,19 @@ export const HeroContainer = styled.div`
 
   @media ${device.laptop} {
     flex-direction: row-reverse;
-    padding: 0 0 0 100px
+    padding: ${paddingLaptopSmall};
   }
 
   @media ${device.laptopL} {
-      padding: 0 150px;
+      padding: ${paddingLaptopLarge};
   }
 
   @media ${device.desktopL} {
-      padding: 0 200px;
+      padding: ${paddingDesktop};
   }
 `;
 
-export const ImageContainer = styled.div`
+export const ContainerWithBackground = styled.div`
   background-image: url(${(props) => props.mobile});
   width: 100%;
   height: 60vh;
@@ -39,10 +42,6 @@ export const ImageContainer = styled.div`
     height: 100vh;
 
   }
-
-  //   @media ${device.laptop} {
-  //     background-image: url(${(props) => props.laptop});
-  //   }
 `;
 
 export const ContextContainer = styled.div`

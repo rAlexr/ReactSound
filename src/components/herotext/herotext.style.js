@@ -3,7 +3,7 @@ import { colors, device } from "shared/style/varaibles";
 
 const { primaryGray, primaryOrange, white } = colors;
 
-export const TextContainer = styled.div`
+export const HeroTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,7 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const PromoParagraph = styled.p`
+export const HeroPromoParagraph = styled.p`
   color: ${(props) => (props.gray ? primaryGray : primaryOrange)};
   text-transform: upperCase;
   letter-spacing: 10px;
@@ -33,7 +33,7 @@ export const PromoParagraph = styled.p`
   }
 `;
 
-export const Header = styled.h1`
+export const HeroHeader = styled.h1`
   color: ${white};
   font-size: 50px;
   font-weight: 600;
@@ -48,11 +48,12 @@ export const Header = styled.h1`
 
   @media ${device.desktopL} {
     font-size: 76px;
-    width: 450px;
+    width: 480px;
+    letter-spacing: 2px;
   }
 `;
 
-export const InfoParagraph = styled.p`
+export const HeroInfoParagraph = styled.p`
   color: ${primaryGray};
   max-width: 310px;
   letter-spacing: 1px;
@@ -63,7 +64,8 @@ export const InfoParagraph = styled.p`
     max-width: 400px;
   }
 
-  @media ${device.desktop} {
+  @media ${device.desktopL} {
+    max-width: 500px;
     font-size: 20px;
   }
 `;

@@ -1,7 +1,6 @@
 @use "shared/scss" as *;
 
 .navbar {
-  background-color: #191919;
   &-underline {
     height: 1px;
     background-color: gray;
@@ -25,6 +24,7 @@
     padding: $padding-mobile;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid gray;
 
     > .linktab {
       display: none;

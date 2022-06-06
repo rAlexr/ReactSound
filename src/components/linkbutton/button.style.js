@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { colors } from "shared/style/varaibles";
+
 import { Link } from "react-router-dom";
+import { colors } from "shared/style/varaibles";
 
 const { primaryOrange, black, secondaryOrange, white } = colors;
 
@@ -16,6 +17,7 @@ export const LinkButtonStyle = styled(Link)`
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-size: 13px;
 
   &:hover {
     background-color: ${(props) =>

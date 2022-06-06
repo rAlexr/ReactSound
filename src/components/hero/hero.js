@@ -1,15 +1,16 @@
-import Productext from "components/productext";
+import HeroText from "components/herotext";
+
+import { ContainerWithBackground, ContextContainer, HeroContainer } from "./hero.style";
 
 import mobile from "shared/assets/home/mobile/moba.jpg";
 import tablet from "shared/assets/home/tablet/image-header-1536.jpg";
-import { ImageContainer, ContextContainer, HeroContainer } from "./hero.style";
 
 const Hero = () => {
   return (
     <HeroContainer>
-      <ImageContainer mobile={mobile} tablet={tablet} />
+      <ContainerWithBackground mobile={mobile} tablet={tablet} />
       <ContextContainer>
-        <Productext
+        <HeroText
           promo={"new product"}
           header={"XX99 Mark II Headphones"}
           info={
