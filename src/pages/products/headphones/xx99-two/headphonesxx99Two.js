@@ -1,4 +1,4 @@
-import AmountButton from "components/amountbutton";
+import AmountButton from "components/additemstocart";
 import ProductCard from "components/productcard";
 import { getCategorysAndDocuments } from "containers/store/firebase/firebase";
 import { useEffect } from "react";

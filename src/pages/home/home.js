@@ -1,7 +1,5 @@
 import FirstBanner from "components/firstbanner";
-import Footer from "components/footer";
 import Hero from "components/hero";
-import MarketingBanner from "components/marketingbanner";
 import SecondBanner from "components/secondbanner";
 import ThirdBanner from "components/thirdbanner";
 import ThumbNailGirdle from "components/thumbnailgirdle";
@@ -17,9 +15,7 @@ const Home = () => {
         <FirstBanner />
         <SecondBanner />
         <ThirdBanner />
-        <MarketingBanner />
       </PaddingContainer>
-      <Footer />
     </div>
   );
 };

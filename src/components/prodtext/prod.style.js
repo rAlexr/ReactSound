@@ -8,12 +8,13 @@ export const TextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   z-index: 9;
+  text-align: ${(props) => props.center ? 'center' : 'start' };
 
   @media ${device.laptop} {
       align-items: start;
       text-align: start;
       flex: 1;
-      jusify-
+      padding: ${(props) => props.padd ? '0 0 0 100px' : '0 100px 0 0'}
   }
 `;
 

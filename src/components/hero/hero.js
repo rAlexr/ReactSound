@@ -11,6 +11,7 @@ const Hero = () => {
       <ContainerWithBackground mobile={mobile} tablet={tablet} />
       <ContextContainer>
         <HeroText
+          gray
           promo={"new product"}
           header={"XX99 Mark II Headphones"}
           info={

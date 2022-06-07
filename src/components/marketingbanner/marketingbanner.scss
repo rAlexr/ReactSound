@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 40px;
 
   img {
     width: 100%;
@@ -36,6 +37,7 @@
   }
 
   @include tablet {
+    padding: 0 50px;
     &-text {
       h1 {
         font-size: calculateRem(45px);
@@ -51,11 +53,12 @@
 
   @include laptop-small {
     flex-direction: row-reverse;
+    padding: 0 100px;
 
     > .special {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
     }
 
     img {
@@ -81,6 +84,7 @@
 
   @include laptop-large {
     height: 100vh;
+    padding: 0 180px;
 
     img {
       width: 100%;

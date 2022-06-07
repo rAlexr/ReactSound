@@ -1,6 +1,6 @@
 import { BasicButton } from "./button.style";
 
-const Button = ({ text = undefined ? "" : "basic button", onClick }) => {
+const Button = ({ text = undefined ? "" : "basic button", onClick, color, width }) => {
   const handleClick = () => {
     if (typeof onClick === "function") {
       onClick();
@@ -8,7 +8,7 @@ const Button = ({ text = undefined ? "" : "basic button", onClick }) => {
   };
 
   return (
-    <BasicButton black onClick={handleClick}>
+    <BasicButton onClick={handleClick} orange={color} count={width}>
       {text}
     </BasicButton>
   );

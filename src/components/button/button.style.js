@@ -4,7 +4,7 @@ import { colors } from "shared/style/varaibles";
 const { primaryOrange, black, secondaryOrange, white } = colors;
 
 export const BasicButton = styled.button`
-  width: 160px;
+  width: ${(props) => props.count ? '30px' : '160px'};
   height: 48px;
   display: flex;
   align-items: center;
@@ -15,6 +15,7 @@ export const BasicButton = styled.button`
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+  border: none;
 
   &:hover {
     background-color: ${(props) =>

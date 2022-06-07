@@ -8,6 +8,8 @@ import { Outlet } from "react-router-dom";
 import LinkTab from "components/linktab";
 import CartDropDown from "components/cartdropdown";
 import { useContext } from "react";
+import MarketingBanner from "components/marketingbanner";
+import Footer from "components/footer";
 
 const NavBar = () => {
   const { isCartOpen, setIsCartOpen } = useContext(CartContext);
@@ -26,6 +28,8 @@ const NavBar = () => {
         <CartIcon onClick={toogle} />
       </div>
       <Outlet />
+      <MarketingBanner />
+      <Footer />
     </div>
   );
 };

@@ -1,5 +1,4 @@
-import AmountButton from "components/amountbutton";
-import ProductCard from "components/productcard";
+import AmountButton from "components/additemstocart";
 
 import data from 'shared/json/xx99-mark-one.json';
 
@@ -8,13 +7,7 @@ const HeadphonesXX99 = () => {
 
   return (
     <div>
-        {
-          data.map((data) => (
-            <ProductCard key={data.id} product={data} />
-          )) 
-        }
         <AmountButton text={"add to cart"} className={"orange"} price={price} product={data}/>
-      
     </div>
   );
 };
