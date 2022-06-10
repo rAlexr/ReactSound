@@ -15,9 +15,16 @@ const AddItemsToCart = ({
   text = undefined ? "" : "add to cart",
   price = "",
   product,
+  onClick
 }) => {
   const { count, setCount } = useContext(AmountContext);
   const total = count * price;
+
+  const handleClick = () => {
+    if(typeof onClick === 'function') {
+      onClick();
+    }
+  }
 
   const handleIncrement = () => {
     setCount(count + 1);
@@ -51,7 +58,7 @@ const AddItemsToCart = ({
           </AmountButton>
         </AmountButtons>
 
-        <Button color={"orange"} text={text} onClick={handleIncrement} />
+        <Button color={"orange"} text={text} onClick={handleClick} />
       </ButtonsContainer>
     </>
   );

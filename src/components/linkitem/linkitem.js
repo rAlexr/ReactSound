@@ -1,12 +1,7 @@
-import { Link } from "react-router-dom";
+import { LinkTo } from "./linkitem.styled";
 
-const LinkItem = ({ path, text=""}) => {
-
-    return(
-        <div className="linkitem">
-            <Link to={path}>{text}</Link>
-        </div>
-    )
+const LinkItem = ({ path, text = "" }) => {
+  return <LinkTo to={path}>{text}</LinkTo>;
 };
 
 export default LinkItem;

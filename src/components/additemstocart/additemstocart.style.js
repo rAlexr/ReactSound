@@ -4,6 +4,8 @@ const { primaryOrange, secondaryGray, white } = colors;
 
 export const DisplayTotal = styled.span`
   font-weight: 800;
+  display: block;
+  margin: 0 0 20px 0;
 `;
 
 export const ButtonsContainer = styled.div`

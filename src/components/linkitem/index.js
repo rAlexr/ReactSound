@@ -1,3 +1,3 @@
 import LinkItem from "./linkitem";
-import "./linkitem.scss";
+import "./linkitem.styled.js";
 export default LinkItem;

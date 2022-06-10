@@ -26,14 +26,17 @@ export const CategoryImage = styled.div`
   background-size: cover;
   background-position: center;
   padding: 0 40px;
+
   @media ${device.tablet} {
     background-image: url(${(props) => props.tablet});
-    width: 400px;
+    width: ${(props) => props.product ? '250px' : '400px'};
+    height: ${(props) => props.product ? '500px' : '400px'};
+
   }
 
   @media ${device.laptop} {
     background-image: url(${(props) => props.laptop});
-    height: 400px;
+    height: ${(props) => props.product ? '500px' : '400px'};
     flex: 1;
   }
 

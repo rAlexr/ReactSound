@@ -9,6 +9,7 @@ import HeadphonesXX99 from "pages/products/headphones/xx99-one";
 import HeadphonesXX99Two from "pages/products/headphones/xx99-two";
 import Speakers from "pages/category/speakers";
 import Earphones from "pages/category/earphones";
+import Productxx59 from "pages/products/headphones/xx59";
 import ProductPage from "pages/productpage/productpage";
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
           <Route path="headphones" element={<Headphones />} />
           <Route path="speakers" element={<Speakers />} />
           <Route path="earphones" element={<Earphones />} />
-          <Route path="productpage" element={<ProductPage />} />
+          <Route path="productxx59" element={<Productxx59 />} />
+          <Route path="product" element={<ProductPage/>} />
         </Route>
       </Routes>
     </div>
