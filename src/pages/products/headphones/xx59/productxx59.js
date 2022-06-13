@@ -4,28 +4,7 @@ import mobile from "shared/img/headphones-xx99-mark-two/mobile/image-product.jpg
 import tablet from "shared/img/headphones-xx99-mark-two/tablet/image-product.jpg";
 import laptop from "shared/img/headphones-xx99-mark-two/desktop/image-product.jpg";
 
-import { useNavigate } from "react-router-dom";
-import { getData } from "shared/js";
-
 const Productxx59 = ({ props }) => {
-  const navigate = useNavigate();
-  const myData = async () =>
-    await getData("data").then((res) => console.log(res.data[0].id));
-
-  const handleNav = () => {
-    navigate("/product");
-    return myData;
-  };
-
-  if (!props?.id) {
-    return (
-      <>
-        loading
-        <button onClick={handleNav}>press me </button>
-      </>
-    );
-  }
-
   return (
     <>
       <ProductPage

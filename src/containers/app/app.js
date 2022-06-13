@@ -25,7 +25,9 @@ function App() {
           <Route path="speakers" element={<Speakers />} />
           <Route path="earphones" element={<Earphones />} />
           <Route path="productxx59" element={<Productxx59 />} />
-          <Route path="product" element={<ProductPage />} />
+          <Route path="product" element={<ProductPage />} >
+            <Route path=":id" element={<ProductPage />} />
+          </Route>
         </Route>
       </Routes>
     </div>

@@ -5,7 +5,7 @@ axios
   .get("http://localhost:3000/json/data.json")
   .then(function (response) {
     // handle success
-    console.log("this is helper", response);
+    console.log("SUCCES");
   })
   .catch(function (error) {
     // handle error
