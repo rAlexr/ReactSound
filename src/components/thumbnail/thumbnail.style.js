@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors, device } from "shared/style/varaibles";
 import { Link } from "react-router-dom";
 
-const { primaryGray, secondaryGray, primaryOrange } = colors;
+const { secondaryGray, primaryOrange, white } = colors;
 
 export const ThumbContainer = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const ThumbContainer = styled.div`
   align-items: center;
   justify-content: end;
   height: 204px;
-  background-color: ${primaryGray};
+  background-color: #afafaf;
   border-radius: 20px;
   padding: 0 0 30px 0;
 
@@ -60,7 +60,7 @@ export const ThumbLink = styled(Link)`
   font-size: 13px;
   text-transform: uppercase;
   padding: 1px 10px 0 0;
-  color: ${secondaryGray};
+  color: ${white};
 
   &:hover {
       color: ${primaryOrange};

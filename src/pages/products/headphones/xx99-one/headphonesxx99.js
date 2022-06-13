@@ -1,9 +1,10 @@
 import AmountButton from "components/additemstocart";
 
-import data from 'shared/json/xx99-mark-one.json';
+import data from '../../../../shared/json/xx99-mark-one.json';
 
 const HeadphonesXX99 = () => {
  const { price } = data[0];
+ console.log(data)
 
   return (
     <div>

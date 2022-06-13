@@ -8,9 +8,9 @@ const ThirdBanner = () => {
   return (
     <div className="thirdbanner">
       <picture className="thirdbanner-special">
-        <source srcset={`${laptop}`} media={'(min-width: 1024px)'} />
-        <source srcset={`${tablet}`} media={'(min-width: 768px)'} />
-        <source srcset={`${mobile}`} media={'(min-width: 300px)'} />
+        <source srcst={`${laptop}`} media={'(min-width: 1024px)'} />
+        <source srcst={`${tablet}`} media={'(min-width: 768px)'} />
+        <source srcst={`${mobile}`} media={'(min-width: 300px)'} />
 
         <img src={mobile} alt={'speakers'} />
       </picture>

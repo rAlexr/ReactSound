@@ -24,7 +24,7 @@ export const colors = {
     primaryOrange: '#d87d4a',
     secondaryOrange: '#fbaf85',  
     black : '#000000',
-    white: '#ffffff',
+    white: '#FFFFFF',
     primaryGray: '#f1f1f1',
     secondaryGray: ' #afafaf'
 };
