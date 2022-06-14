@@ -20,19 +20,19 @@ import { useEffect, useState } from "react";
 
 const ProductPage = () => {
   const [mydata, setmyData] = useState({});
-  const [iamges, setImages ] = useState({});
+  // const [iamges, setImages ] = useState({});
 
   const params = useParams();
   console.log(params);
 
   useEffect(() => {
-    getData(params.id).then((res) => setmyData(res.data[0]));
-    getData(params.id).then((res) => setImages(res.data[0].categoryImage.mobile));
-    
+    getData(params.id).then((res) => setmyData(res.data));
+    // getData(params.id).then((res) => setImages(res.data[0].categoryImage.mobile));  
   }, []);
 
-const myImage = mydata;
-console.log(iamges);
+  console.log(mydata?.categoryImage?.mobile);
+
+  const myImage = mydata;
 
   return (
     <ProductItemsWraper>
