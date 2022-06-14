@@ -1,9 +1,9 @@
 // import { CategoryImage } from "components/categorytab/categorytab.style";
 
-import mobile from "shared/img/headphones-xx99-mark-two/mobile/image-product.jpg";
-import tablet from "shared/img/headphones-xx99-mark-two/tablet/image-product.jpg";
-import laptop from "shared/img/headphones-xx99-mark-two/desktop/image-product.jpg";
-import AddItemsToCart from "components/additemstocart";
+import mobile from "../../shared/assets/product-xx59-headphones/mobile/image-product.jpg";
+// import tablet from "shared/img/headphones-xx99-mark-two/tablet/image-product.jpg";
+// import laptop from "shared/img/headphones-xx99-mark-two/desktop/image-product.jpg";
+// import AddItemsToCart from "components/additemstocart";
 
 import ProductTab from "components/producttab";
 import {
@@ -16,6 +16,7 @@ import ProductImages from "components/productimages";
 import { useParams } from "react-router-dom";
 import { getData } from "shared/js";
 import { useEffect, useState } from "react";
+import { CategoryImage } from "components/categorytab/categorytab.style";
 
 
 const ProductPage = () => {
@@ -32,12 +33,12 @@ const ProductPage = () => {
 
   console.log(mydata?.categoryImage?.mobile);
 
-  const myImage = mydata;
+  const myImage = mydata?.categoryImage?.mobile;
 
   return (
     <ProductItemsWraper>
       <ProductPadding>
-        {/* { <CategoryImage img={myImage.mobile} tablet={myImage.tablet} laptop={myImage.desktop} product /> } */}
+         <CategoryImage img={myImage} tablet={myImage} laptop={myImage} product />
         <ProductAmountWraper>
           <ProductTab
             // promo={promo}
@@ -49,7 +50,7 @@ const ProductPage = () => {
         </ProductAmountWraper>
       </ProductPadding>
       <FeatureText
-        title={ mydata.category }
+        title={ mydata.description }
         // firstparagraph={firstpara}
         // secondparagraph={secondpara}
         // titlebox={boxtitle}
