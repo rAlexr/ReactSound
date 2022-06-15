@@ -6,6 +6,7 @@ import { UserProvider } from "containers/store/context/usercontext";
 import App from "./containers/app";
 import { AmountProvider } from "containers/store/context/amountContext";
 import { CartProvider } from "containers/store/context/cartContext";
+import { Normalize } from "styled-normalize";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <UserProvider>
         <AmountProvider>
           <CartProvider>
+            <Normalize />
             <App />
           </CartProvider>
         </AmountProvider>

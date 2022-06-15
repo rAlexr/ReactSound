@@ -35,22 +35,22 @@ const FeatureText = ({
         <FeatureTitle>{titlebox}</FeatureTitle>
 
         <FeatureItemsContainer>
-          <FeaturePiece>{piece1}</FeaturePiece>
+          <FeaturePiece>{`${piece1}x`}</FeaturePiece>
           <FeatureItem>{item1}</FeatureItem>
         </FeatureItemsContainer>
 
         <FeatureItemsContainer>
-          <FeaturePiece>{piece2}</FeaturePiece>
+          <FeaturePiece>{`${piece2}x`}</FeaturePiece>
           <FeatureItem>{item2}</FeatureItem>
         </FeatureItemsContainer>
 
         <FeatureItemsContainer>
-          <FeaturePiece>{piece3}</FeaturePiece>
+          <FeaturePiece>{`${piece3}x`}</FeaturePiece>
           <FeatureItem>{item3}</FeatureItem>
         </FeatureItemsContainer>
 
         <FeatureItemsContainer>
-          <FeaturePiece>{piece4}</FeaturePiece>
+          <FeaturePiece>{`${piece4}x`}</FeaturePiece>
           <FeatureItem>{item4}</FeatureItem>
         </FeatureItemsContainer>
       </FeatureColTwo>

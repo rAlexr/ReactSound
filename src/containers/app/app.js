@@ -21,7 +21,9 @@ function App() {
           <Route path="headphonesXX99" element={<HeadphonesXX99 />} />
           <Route path="headphonesXX99two" element={<HeadphonesXX99Two />} />
           <Route path="autentification" element={<Autentification />} />
-          <Route path="headphones" element={<Headphones />} />
+          <Route path="headphones" element={<Headphones />} >
+            {/* <Route path=":id" element={<ProductPage />} /> */}
+          </Route>
           <Route path="speakers" element={<Speakers />} />
           <Route path="earphones" element={<Earphones />} />
           <Route path="productxx59" element={<Productxx59 />} />

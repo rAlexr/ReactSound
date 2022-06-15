@@ -1,67 +1,66 @@
-// import { CategoryImage } from "components/categorytab/categorytab.style";
-
-import mobile from "../../shared/assets/product-xx59-headphones/mobile/image-product.jpg";
-// import tablet from "shared/img/headphones-xx99-mark-two/tablet/image-product.jpg";
-// import laptop from "shared/img/headphones-xx99-mark-two/desktop/image-product.jpg";
-// import AddItemsToCart from "components/additemstocart";
-
+import { useParams } from "react-router-dom";
+import { getData } from "shared/js";
+import { useEffect, useState } from "react";
 import ProductTab from "components/producttab";
+
 import {
   ProductAmountWraper,
   ProductItemsWraper,
   ProductPadding,
 } from "./productpage.styled";
+
+import { CategoryImage } from "components/categorytab/categorytab.style";
 import FeatureText from "components/featuretext";
 import ProductImages from "components/productimages";
-import { useParams } from "react-router-dom";
-import { getData } from "shared/js";
-import { useEffect, useState } from "react";
-import { CategoryImage } from "components/categorytab/categorytab.style";
-
+import AddItemsToCart from "components/additemstocart";
 
 const ProductPage = () => {
   const [mydata, setmyData] = useState({});
-  // const [iamges, setImages ] = useState({});
 
   const params = useParams();
-  console.log(params);
+  console.log(params)
 
   useEffect(() => {
     getData(params.id).then((res) => setmyData(res.data));
-    // getData(params.id).then((res) => setImages(res.data[0].categoryImage.mobile));  
+
+    // eslint-disable-next-line
   }, []);
 
-  console.log(mydata?.categoryImage?.mobile);
+  const mobile = mydata?.categoryImage?.mobile;
+  const tablet = mydata?.categoryImage?.tablet;
+  const desktop = mydata?.categoryImage?.desktop;
 
-  const myImage = mydata?.categoryImage?.mobile;
+  if( params?.id == undefined ) {
+    return <>Loading</>
+  }
 
   return (
     <ProductItemsWraper>
       <ProductPadding>
-         <CategoryImage img={myImage} tablet={myImage} laptop={myImage} product />
+        <CategoryImage img={mobile} tablet={tablet} laptop={desktop} product />
         <ProductAmountWraper>
           <ProductTab
-            // promo={promo}
-            // productTitle={productTitle}
-            // info={info}
-            // link={link}
+            promo={"new product"}
+            productTitle={mydata?.name}
+            info={mydata?.description}
+            link={"/"}
           />
-          {/* <AddItemsToCart price={price} product={data} onClick={onClick} /> */}
+          <AddItemsToCart price={mydata?.price} product={mydata} />
         </ProductAmountWraper>
       </ProductPadding>
       <FeatureText
-        title={ mydata.description }
-        // firstparagraph={firstpara}
-        // secondparagraph={secondpara}
-        // titlebox={boxtitle}
-        // piece1={piece1}
-        // item1={item1}
-        // piece2={piece2}
-        // item2={item2}
-        // piece3={piece3}
-        // item3={item3}
-        // piece4={piece4}
-        // item4={item4}
+        title={mydata?.name}
+        firstparagraph={mydata?.description}
+        secondparagraph={mydata?.features}
+        titlebox={"in the box"}
+        piece1={mydata?.includes?.quantity1}
+        item1={mydata?.includes?.item1}
+        piece2={mydata?.includes?.quantity2}
+        item2={mydata?.includes?.item2}
+        piece3={mydata?.includes?.quantity3}
+        item3={mydata?.includes?.item3}
+        piece4={mydata?.includes?.quantity4}
+        item4={mydata?.includes?.item4}
       />
       <ProductImages />
     </ProductItemsWraper>
